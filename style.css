@@ -134,7 +134,6 @@ h1.title{
 }
 .links{
     display: table;
-    grid-template-columns: repeat(4, 25%);
     table-layout: auto;
     align-content: stretch;
 }
@@ -177,4 +176,17 @@ a.alink{
 #faqlink{
     color: black;
     text-decoration: underline purple;
+}
+
+@media screen and (max-width: 680px){
+    #titlel{
+        display: none;
+        width: 0;
+    }
+}
+@media screen and (min-width: 681px){
+    #titles{
+        display: none;
+        width: 0;
+    }
 }
