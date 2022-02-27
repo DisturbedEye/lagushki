@@ -28,7 +28,7 @@ body{
     position: absolute;
     height: 89%;
     top: 11%;
-    width: 99%;
+    width: 95%;
     margin: 0 10px 0 10px;
     display: grid;
     grid-auto-flow: row;
@@ -37,6 +37,7 @@ body{
     justify-self: center;
     text-align: center;
     vertical-align: middle;
+    width: fit-content;
 }
 .iblock{
     justify-self: center;
@@ -176,6 +177,11 @@ a.alink{
 #faqlink{
     color: black;
     text-decoration: underline purple;
+}
+
+#infoimg{
+    max-width: 95%;
+    height: auto;
 }
 
 @media screen and (max-width: 680px){
