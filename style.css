@@ -1,6 +1,6 @@
 @font-face {
     font-family: "General style";
-    src: url("../site/Lack-Regular.otf") format("truetype");
+    src: local('Lack Regular'), url('Lack-Regular.woff') format('woff');
 }
 
 body{
