@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "General style";
+    src: url("../site/Lack-Regular.otf") format("truetype");
+}
+
+body{
+    color: #050505;
+    padding: 0;
+    font-family: "General style";
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#menu{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% auto;
+    align-content: stretch;
+    justify-content: stretch;
+    margin-bottom: 10px;
+}
+#content{
+    position: absolute;
+    height: 89%;
+    top: 11%;
+    width: 99%;
+    margin: 0 10px 0 10px;
+    display: grid;
+    grid-auto-flow: row;
+}
+.block{
+    justify-self: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.iblock{
+    justify-self: center;
+    text-align: center;
+    vertical-align: middle;
+    font-size: x-large;
+}
+.answer{
+    font-size: large;
+}
+table{
+    background-color: black;
+    border: 0;
+    border-radius: 10px;
+}
+.theader{
+    text-align: center;
+    width: 25px;
+    border-radius: 0;
+}
+.tcontent{
+    border-radius: 0;
+}
+.A > .theader{
+    border-radius: 10px 0 0 0;
+}
+.D > .theader{
+    border-radius: 0 0 0 10px;
+}
+.A > .tcontent{
+    border-radius: 0 10px 0 0;
+}
+.D > .tcontent{
+    border-radius: 0 0 10px 0;
+}
+td{
+    vertical-align: center;
+}
+.A{
+    background-color: wheat;
+}
+.B{
+    background-color: lightgreen;
+}
+.C{
+    background-color: #ffff88;
+}
+.D{
+    background-color: lightpink;
+}
+#archive > img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+td > img{
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin: 2px 1px 2px 1px;
+}
+#qcontent{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.questions{
+    position: relative;
+    font-size: x-large;
+    color: black;
+}
+h1{
+    position: absolute;
+    font-size: x-large;
+}
+div.t1{
+    display: table;
+    height: 100%;
+    justify-self: center;
+}
+h1.title{
+    font-family: "General style";
+    width: fit-content;
+    background: -webkit-linear-gradient(47deg, rgba(9,9,121,1), rgba(42,208,61,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    position: relative;
+    justify-self: center;
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+}
+.links{
+    display: table;
+    grid-template-columns: repeat(4, 25%);
+    table-layout: auto;
+    align-content: stretch;
+}
+.link{
+    justify-self: stretch;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+    color: white;
+}
+a.alink{
+    /* font-family: "General style";
+    width: fit-content;
+    text-align: center;
+    font-weight: 900;
+    background: -webkit-linear-gradient(-47deg, rgba(9,9,121,1), rgba(42,208,61,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    position: relative;
+    justify-self: center;
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle; */
+    color: white;
+    text-decoration: underline;
+}
+#infolink{
+    color: black;
+    text-decoration: underline blue;
+}
+#ratinglink{
+    color: black;
+    text-decoration: underline red;
+}
+#faqlink{
+    color: black;
+    text-decoration: underline purple;
+}
