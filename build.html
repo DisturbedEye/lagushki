@@ -8,31 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> сделай свой рейтинг </title>
 </head>
+<script>
+    
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    console.log(data);
+    console.log(document.getElementById(data));
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
 <body>
-    <script>
-        function dragstart_handler(ev) {
-            // Добавить id целевого элемента в объект передачи данных
-            ev.dataTransfer.setData("application/my-app", ev.target.id);
-            ev.dataTransfer.effectAllowed = "move";
-        }
-        function dragover_handler(ev) {
-            ev.preventDefault();
-            ev.dataTransfer.dropEffect = "move"
-        }
-        function drop_handler(ev) {
-            ev.preventDefault();
-            // Получить id целевого элемента и добавить перемещаемый элемент в его DOM
-            const data = ev.dataTransfer.getData("application/my-app");
-            ev.target.appendChild(document.getElementById(data));
-        }
-    </script>
     <div id="menu">
         <div id="betalabel">Beta</div>
         <div class="t1">
             <h1 id="titlel" class="title">🐸 Лагушки и жабы</h1>
-            <h1 id="titles" class="title">🐸</h1>
+            <a id="titles" class="title" onclick="displayMenu(true)">🐸</a>
         </div>
-        <div class="links">
+        <div class="linksl">
             <a href="index.html" class="link">Index</a>
             <a href="faq.html" class="link">ЧЗВ</a>
             <a href="index2.html" class="link">Index2</a>
@@ -40,65 +41,76 @@
             <a href="rating.html" class="link">Рейтинг</a>
             <a href="build.html" class="alink link">Build</a>
         </div>
+        <div id="linkss">
+            <div id="linkswrap">
+                <a href="index.html" class="alink llink">🐸Index</a>
+                <a href="faq.html" class="llink">ЧЗВ</a>
+                <a href="index2.html" class="llink">Index2</a>
+                <a href="info.html" class="llink">Инфо</a>
+                <a href="rating.html" class="llink">Рейтинг</a>
+                <a href="build.html" class="llink">Build</a>
+            </div>
+        </div>
     </div>
     <div id="content">
-        Создайте свой рейтинг лягушек. Для этого перетащите картинки в соответствующие пункты. <strong>(На старых моделях телефонов может не работать, функция сугубо экспериментальная!)</strong>
+        Создавайте свои рейтинги жаб и лягушек, перетягивая картинку в тот пункт, который вам более всего подходит.
+        <strong>Функция сугубо экспериментальная и может не работать на старых телефонах!</strong>
         <table id="build">
             <tr class="A">
                 <td class="theader">A</td>
-                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+                <td class="tcontent" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </td>
             </tr>
             <tr class="B">
                 <td class="theader">B</td>
-                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </td>
             </tr>
             <tr class="C">
                 <td class="theader">C</td>
-                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
                     
                 </td>
             </tr>
             <tr class="D">
                 <td class="theader">D</td>
-                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </td>
             </tr>
         </table>
-        <div id="archive" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i1">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i2">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i3">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i4">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i5">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i6">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i7">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i8">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i9">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i10">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i11">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i12">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i13">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i14">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i15">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i16">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i17">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i18">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i19">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i20">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i21">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i22">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i23">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i24">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i25">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i26">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i27">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i28">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i29">
-            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i30">
+        <div id="archive" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i1">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i2">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i3">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i4">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i5">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i6">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i7">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i8">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i9">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i10">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i11">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i12">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i13">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i14">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i15">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i16">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i17">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i18">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i19">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i9">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i10">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i11">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i12">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i13">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i14">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i15">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i16">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i17">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i18">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i19">
         </div>
     </div>
 </body>

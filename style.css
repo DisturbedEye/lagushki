@@ -113,7 +113,7 @@ td{
     text-align: left;
 }
 .r{
-    text-align: right;
+    text-align: left;
 }
 #archive > img{
     width: 160px;
@@ -165,7 +165,22 @@ h1.title{
     margin: 0;
     vertical-align: middle;
 }
-.links{
+a.title{
+    font-family: "General style";
+    width: fit-content;
+    background: -webkit-linear-gradient(47deg, rgba(9,9,121,1), rgba(42,208,61,1));
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -moz-background-clip: content-box;
+    -webkit-text-fill-color: transparent;
+    color: white;
+    position: relative;
+    justify-self: center;
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+}
+.linksl{
     display: table;
     table-layout: auto;
     align-content: stretch;
@@ -176,6 +191,33 @@ h1.title{
     text-align: center;
     vertical-align: middle;
     height: 100%;
+}
+#linkss{
+    display: block;
+    width: 100%;
+}
+#linkswrap{
+    overflow: auto;
+    word-wrap: normal;
+    display: table;
+    width: 1px;
+    height: 100%;
+}
+.link{
+    justify-self: stretch;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
+.llink{
+    justify-self: stretch;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    height: 100%;
+    width: 100px;
+    margin: 0 10px 0 10px;
 }
 a:-webkit-any-link{
     text-decoration: none;
@@ -363,7 +405,6 @@ table#build{
 #i30{
     background-image: url("img/32.jpeg");
 }
-
 @media screen and(-webkit-min-device-pixel-ratio:0) {
     h1.title{
         background: -webkit-linear-gradient(47deg, rgba(9,9,121,1), rgba(42,208,61,1));
@@ -387,13 +428,18 @@ table#build{
     .links > a.link{
         font-size: small;
     }
+    .linksl{
+        display: none;
+    }
 }
 @media screen and (min-width: 681px){
     #titles{
         display: none;
         width: 0;
     }
-
+    #linkss{
+        display: none;
+    }
 }
 @media screen and (max-height: 680px) {
     #menu{
