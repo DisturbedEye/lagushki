@@ -8,24 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> сделай свой рейтинг </title>
 </head>
-<script>
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(data);
-    console.log(document.getElementById(data));
-    ev.target.appendChild(document.getElementById(data));
-}
-</script>
 <body>
+    <script>
+        function dragstart_handler(ev) {
+            // Добавить id целевого элемента в объект передачи данных
+            ev.dataTransfer.setData("application/my-app", ev.target.id);
+            ev.dataTransfer.effectAllowed = "move";
+        }
+        function dragover_handler(ev) {
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect = "move"
+        }
+        function drop_handler(ev) {
+            ev.preventDefault();
+            // Получить id целевого элемента и добавить перемещаемый элемент в его DOM
+            const data = ev.dataTransfer.getData("application/my-app");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
     <div id="menu">
         <div id="betalabel">Beta</div>
         <div class="t1">
@@ -42,51 +42,63 @@ function drop(ev) {
         </div>
     </div>
     <div id="content">
+        Создайте свой рейтинг лягушек. Для этого перетащите картинки в соответствующие пункты. <strong>(На старых моделях телефонов может не работать, функция сугубо экспериментальная!)</strong>
         <table id="build">
             <tr class="A">
                 <td class="theader">A</td>
-                <td class="tcontent" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
                 </td>
             </tr>
             <tr class="B">
                 <td class="theader">B</td>
-                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
 
                 </td>
             </tr>
             <tr class="C">
                 <td class="theader">C</td>
-                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
                     
                 </td>
             </tr>
             <tr class="D">
                 <td class="theader">D</td>
-                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <td class="tcontent" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">
 
                 </td>
             </tr>
         </table>
-        <div id="archive" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i1">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i2">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i3">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i4">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i5">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i6">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i7">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i8">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i9">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i10">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i11">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i12">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i13">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i14">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i15">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i16">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i17">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i18">
-            <p draggable="true" alt="" ondragstart="drag(event)" id="i19">
+        <div id="archive" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i1">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i2">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i3">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i4">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i5">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i6">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i7">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i8">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i9">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i10">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i11">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i12">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i13">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i14">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i15">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i16">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i17">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i18">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i19">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i20">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i21">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i22">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i23">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i24">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i25">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i26">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i27">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i28">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i29">
+            <p draggable="true" draggable="true" ondragstart="dragstart_handler(event)" id="i30">
         </div>
     </div>
 </body>

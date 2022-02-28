@@ -14,20 +14,20 @@ body{
     flex-flow: row wrap;
     align-items: center;
     justify-items: stretch;
-    height: 100%;
+    height: fit-content;
     width: 100%;
     margin: 0;
 }
 #betalabel{
     position: absolute;
-    left: 3px;
-    top: 3px;
+    left: 10px;
+    top: 10px;
     color: red;
-
+    z-index: 10;
 }
 #menu{
     position: relative;
-    height: 10%;
+    height: 80px;
     width: 100%;
     background-color: black;
     color: white;
@@ -42,11 +42,11 @@ body{
     height: 88.9%;
     width: 100%;
     margin: 0 10px 0 10px;
-    display: grid;
-    grid-auto-flow: row;
+    display: flex;
+    flex-flow: column wrap;
 }
 .block{
-    justify-self: center;
+    align-self: center;
     text-align: center;
     font-size: 20px;
     vertical-align: middle;
@@ -61,6 +61,11 @@ body{
 .answer{
     font-size: 18px;
     word-wrap: normal;
+}
+strong{
+    color: red;
+    text-decoration: underline red 2px;
+    margin-bottom: 5px; 
 }
 table{
     background-color: black;
@@ -103,6 +108,12 @@ td{
 }
 .D{
     background-color: lightpink;
+}
+.l{
+    text-align: left;
+}
+.r{
+    text-align: right;
 }
 #archive > img{
     width: 160px;
@@ -216,12 +227,14 @@ a.alink{
 #infoimg{
     max-width: 95%;
     height: auto;
+    align-self: stretch;
+    text-align: center;
 }
 #archive{
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    justify-items: flex-start;
+    justify-content: space-around;
 }
 #archive > p{
     margin: 2px;
@@ -231,6 +244,7 @@ a.alink{
     border: solid black 2px;
     object-fit: cover;
     background-size: cover;
+    background-position: center;
 }
 td > p{
     margin: 2px;
@@ -240,8 +254,9 @@ td > p{
     border: solid black 2px;
     object-fit: cover;
     background-size: cover;
+    background-position: center;
 }
-table#build > tbody > tr > td.tcontent{
+table > tbody > tr > td.tcontent{
     padding: 0;
     vertical-align: middle;
     display: flex;
@@ -253,6 +268,10 @@ table#build > tbody > tr > td.tcontent{
 }
 table#build > tbody > tr{
     height:fit-content;
+    width: 100%;
+}
+table#build{
+    width: 100%;
 }
 #i1{
     background-image: url("img/1.jpeg");
@@ -310,6 +329,39 @@ table#build > tbody > tr{
 }
 #i19{
     background-image: url("img/21.jpeg");
+}
+#i20{
+    background-image: url("img/22.jpeg");
+}
+#i21{
+    background-image: url("img/23.jpeg");
+}
+#i22{
+    background-image: url("img/24.jpeg");
+}
+#i23{
+    background-image: url("img/25.jpeg");
+}
+#i24{
+    background-image: url("img/26.jpeg");
+}
+#i25{
+    background-image: url("img/27.jpeg");
+}
+#i26{
+    background-image: url("img/28.jpeg");
+}
+#i27{
+    background-image: url("img/29.jpeg");
+}
+#i28{
+    background-image: url("img/30.jpeg");
+}
+#i29{
+    background-image: url("img/31.jpeg");
+}
+#i30{
+    background-image: url("img/32.jpeg");
 }
 
 @media screen and(-webkit-min-device-pixel-ratio:0) {
