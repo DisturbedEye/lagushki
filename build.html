@@ -8,6 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> сделай свой рейтинг </title>
 </head>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
 <body>
     <div id="menu">
         <div class="t1">
@@ -27,38 +42,50 @@
         <table id="build">
             <tr class="A">
                 <td class="theader">A</td>
-                <td class="tcontent">
+                <td class="tcontent" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </td>
             </tr>
             <tr class="B">
                 <td class="theader">B</td>
-                <td class="tcontent">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </td>
             </tr>
             <tr class="C">
                 <td class="theader">C</td>
-                <td class="tcontent">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
                     
                 </td>
             </tr>
             <tr class="D">
                 <td class="theader">D</td>
-                <td class="tcontent">
+                <td class="tcontent" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </td>
             </tr>
         </table>
-        <div id="archive">
+        <div id="archive" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
             Архив лягушек и жаб:<br>
-            <img src="img/1.jpeg" draggable="true" ondragstart="event.dataTransfer.setData('image/jpeg'), 'img/1.jpeg'">
-            <img src="img/2.jpg">
-            <img src="img/3.jpg">
-            <img src="img/4.jpg">
-            <img src="img/5.jpg">
-            <img src="img/6.jpg">
-            <img src="img/7.jpg">
+            <img src="img/1.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i1">
+            <img src="img/2.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i2">
+            <img src="img/3.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i3">
+            <img src="img/4.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i4">
+            <img src="img/5.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i5">
+            <img src="img/6.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i6">
+            <img src="img/7.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i7">
+            <img src="img/8.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i8">
+            <img src="img/9.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i9">
+            <img src="img/10.png" draggable="true" alt="" ondragstart="drag(event)" id="i10">
+            <img src="img/11.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i11">
+            <img src="img/12.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i12">
+            <img src="img/13.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i13">
+            <img src="img/14.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i14">
+            <img src="img/17.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i15">
+            <img src="img/18.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i16">
+            <img src="img/19.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i17">
+            <img src="img/20.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i18">
+            <img src="img/21.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i19">
         </div>
     </div>
 </body>
