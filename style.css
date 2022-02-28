@@ -18,6 +18,13 @@ body{
     width: 100%;
     margin: 0;
 }
+#betalabel{
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    color: red;
+
+}
 #menu{
     position: relative;
     height: 10%;
