@@ -215,3 +215,8 @@ a.alink{
     }
 
 }
+@media screen and (max-height: 680px) {
+    #menu{
+        height: 20%
+    }
+}
