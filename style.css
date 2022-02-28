@@ -167,6 +167,12 @@ a.link{
     color: white;
     text-decoration: none;
 }
+.answer{
+    word-wrap: break-word;
+}
+.questions{
+    word-wrap: break-word;
+}
 a.alink{
     /* font-family: "General style";
     width: fit-content;
