@@ -20,6 +20,8 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
+    console.log(data);
+    console.log(document.getElementById(data));
     ev.target.appendChild(document.getElementById(data));
 }
 </script>
@@ -43,7 +45,6 @@ function drop(ev) {
             <tr class="A">
                 <td class="theader">A</td>
                 <td class="tcontent" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
-
                 </td>
             </tr>
             <tr class="B">
@@ -66,26 +67,25 @@ function drop(ev) {
             </tr>
         </table>
         <div id="archive" dropzone="move" ondrop="drop(event)" ondragover="allowDrop(event)">
-            Архив лягушек и жаб:<br>
-            <img src="img/1.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i1">
-            <img src="img/2.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i2">
-            <img src="img/3.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i3">
-            <img src="img/4.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i4">
-            <img src="img/5.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i5">
-            <img src="img/6.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i6">
-            <img src="img/7.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i7">
-            <img src="img/8.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i8">
-            <img src="img/9.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i9">
-            <img src="img/10.png" draggable="true" alt="" ondragstart="drag(event)" id="i10">
-            <img src="img/11.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i11">
-            <img src="img/12.jpg" draggable="true" alt="" ondragstart="drag(event)" id="i12">
-            <img src="img/13.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i13">
-            <img src="img/14.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i14">
-            <img src="img/17.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i15">
-            <img src="img/18.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i16">
-            <img src="img/19.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i17">
-            <img src="img/20.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i18">
-            <img src="img/21.jpeg" draggable="true" alt="" ondragstart="drag(event)" id="i19">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i1">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i2">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i3">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i4">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i5">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i6">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i7">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i8">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i9">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i10">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i11">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i12">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i13">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i14">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i15">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i16">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i17">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i18">
+            <p draggable="true" alt="" ondragstart="drag(event)" id="i19">
         </div>
     </div>
 </body>

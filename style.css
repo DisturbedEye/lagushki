@@ -60,7 +60,8 @@ table{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.theader{
+td.theader{
+    height: fit-content;
     text-align: center;
     width: 25px;
     border-radius: 0;
@@ -95,7 +96,6 @@ td{
 .D{
     background-color: lightpink;
 }
-
 #archive > img{
     width: 160px;
     height: 160px;
@@ -199,10 +199,103 @@ a.alink{
     color: black;
     text-decoration: underline limegreen 2px;
 }
-
 #infoimg{
     max-width: 95%;
     height: auto;
+}
+#archive{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-items: flex-start;
+}
+#archive > p{
+    margin: 2px;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    border: solid black 2px;
+    object-fit: cover;
+    background-size: cover;
+}
+td > p{
+    margin: 2px;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    border: solid black 2px;
+    object-fit: cover;
+    background-size: cover;
+}
+table#build > tbody > tr > td.tcontent{
+    padding: 0;
+    vertical-align: middle;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    justify-self: center;
+    min-height: 50px;
+    max-height: 100%;
+}
+table#build > tbody > tr{
+    height:fit-content;
+}
+#i1{
+    background-image: url("img/1.jpeg");
+}
+#i2{
+    background-image: url("img/2.jpg");
+}
+#i3{
+    background-image: url("img/3.jpg");
+}
+#i4{
+    background-image: url("img/4.jpg");
+}
+#i5{
+    background-image: url("img/5.jpg");
+}
+#i6{
+    background-image: url("img/6.jpg");
+}
+#i7{
+    background-image: url("img/7.jpg");
+}
+#i8{
+    background-image: url("img/8.jpg");
+}
+#i9{
+    background-image: url("img/9.jpg");
+}
+#i10{
+    background-image: url("img/10.png");
+}
+#i11{
+    background-image: url("img/11.jpg");
+}
+#i12{
+    background-image: url("img/12.jpg");
+}
+#i13{
+    background-image: url("img/13.jpeg");
+}
+#i14{
+    background-image: url("img/14.jpeg");
+}
+#i15{
+    background-image: url("img/17.jpeg");
+}
+#i16{
+    background-image: url("img/18.jpeg");
+}
+#i17{
+    background-image: url("img/19.jpeg");
+}
+#i18{
+    background-image: url("img/20.jpeg");
+}
+#i19{
+    background-image: url("img/21.jpeg");
 }
 
 @media screen and(-webkit-min-device-pixel-ratio:0) {
