@@ -3,17 +3,24 @@
     src: local('Lack Regular'), url('Lack-Regular.woff') format('woff');
 }
 
+html{
+    height: 100%;
+}
+
 body{
     color: #050505;
     padding: 0;
     font-family: "General style";
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-items: stretch;
     height: 100%;
     width: 100%;
     margin: 0;
 }
 #menu{
-    position: absolute;
+    position: relative;
     height: 10%;
     width: 100%;
     background-color: black;
@@ -25,10 +32,9 @@ body{
     margin-bottom: 10px;
 }
 #content{
-    position: absolute;
-    height: 89%;
-    top: 11%;
-    width: 95%;
+    position: relative;
+    height: 88.9%;
+    width: 100%;
     margin: 0 10px 0 10px;
     display: grid;
     grid-auto-flow: row;
@@ -52,6 +58,7 @@ table{
     background-color: black;
     border: 0;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 .theader{
     text-align: center;
@@ -88,16 +95,19 @@ td{
 .D{
     background-color: lightpink;
 }
+
 #archive > img{
     width: 160px;
     height: 160px;
     border-radius: 10px;
+    border: solid black 2px;
     object-fit: cover;
 }
 td > img{
     width: 160px;
     height: 160px;
     border-radius: 10px;
+    border: solid black 2px;
     object-fit: cover;
     vertical-align: middle;
     margin: 2px 1px 2px 1px;
@@ -105,6 +115,7 @@ td > img{
 #qcontent{
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    justify-self: center;
 }
 .questions{
     position: relative;
@@ -178,6 +189,10 @@ a.alink{
     color: black;
     text-decoration: underline purple;
 }
+#buildlink{
+    color: black;
+    text-decoration: underline limegreen;
+}
 
 #infoimg{
     max-width: 95%;
@@ -189,10 +204,14 @@ a.alink{
         display: none;
         width: 0;
     }
+    .links > a.link{
+        font-size: small;
+    }
 }
 @media screen and (min-width: 681px){
     #titles{
         display: none;
         width: 0;
     }
+
 }
