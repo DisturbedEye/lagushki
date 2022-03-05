@@ -151,6 +151,7 @@ td > img{
     position: relative;
     font-size: x-large;
     color: black;
+    margin-bottom: 20px;
 }
 h1{
     position: absolute;
