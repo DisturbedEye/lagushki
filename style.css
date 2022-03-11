@@ -390,6 +390,10 @@ table#build{
     width: 600px;
     font-weight: 900;
 }
+#titles{
+    font-weight: 900;
+    font-size: 30px;
+}
 .visible{
     display: flex;
     flex-flow: wrap column;
