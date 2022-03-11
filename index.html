@@ -8,7 +8,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="indexbackground"></div>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+            menu = document.getElementById("linkssmenu");
+            menu.classList.toggle("visible");
+        }
+    </script>
     <div id="menu">
         <div id="betalabel">Beta</div>
         <div class="t1">
@@ -23,12 +29,19 @@
             <a href="build.html" class="link">Build</a>
         </div>
         <div id="linkss">
-            <a href="faq.html" class="llink">ЧЗВ</a>
-            <a href="index2.html" class="llink">Index2</a>
-            <a href="info.html" class="llink">Инфо</a>
-            <a href="rating.html" class="llink">Рейтинг</a>
-            <a href="build.html" class="llink">Build</a>
+            <a class="bars" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
         </div>
+    </div>
+    <div id="linkssmenu">
+        <a href="faq.html" class="llink">ЧЗВ</a>
+        <a href="index2.html" class="llink">Index2</a>
+        <a href="info.html" class="llink">Инфо</a>
+        <a href="rating.html" class="alink llink">Рейтинг</a>
+        <a href="build.html" class="llink">Build</a>
     </div>
     <div id="content">
         <div class="iblock">
